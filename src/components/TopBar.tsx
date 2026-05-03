@@ -1,4 +1,4 @@
-import { Search, User, Bell, Globe } from 'lucide-react';
+import { Search, Bell, Globe } from 'lucide-react';
 import type { Language } from '../App';
 
 interface TopBarProps {

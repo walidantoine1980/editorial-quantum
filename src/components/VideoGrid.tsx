@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { VideoCard } from './VideoCard';
 import type { Video } from '../data/mockVideos';
-import { curationService } from '../services/curationService';
 import type { Language } from '../App';
 
 interface VideoGridProps {
