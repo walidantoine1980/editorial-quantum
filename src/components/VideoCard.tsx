@@ -20,7 +20,11 @@ export const VideoCard = ({ video, isHero = false, lang }: VideoCardProps) => {
   const summary = video.editorialChoice[lang];
 
   return (
-    <div className={`group relative flex flex-col overflow-hidden rounded-[32px] bg-white transition-all duration-700 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-2 ring-1 ring-black/[0.03]
+    <a 
+      href={`https://www.youtube.com/results?search_query=${encodeURIComponent(video.originalTitle)}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`group relative flex flex-col overflow-hidden rounded-[32px] bg-white transition-all duration-700 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-2 ring-1 ring-black/[0.03] cursor-pointer
       ${isHero ? 'h-[520px]' : 'h-full min-h-[360px]'}`}>
       
       {/* Thumbnail */}
@@ -86,6 +90,6 @@ export const VideoCard = ({ video, isHero = false, lang }: VideoCardProps) => {
             </p>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
