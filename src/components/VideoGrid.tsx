@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { VideoCard } from './VideoCard';
 import type { Video } from '../data/mockVideos';
 import type { Language } from '../App';
@@ -7,26 +6,12 @@ interface VideoGridProps {
   lang: Language;
   searchQuery: string;
   activeCategory: string;
+  videos: Video[];
+  loading: boolean;
 }
 
-export const VideoGrid = ({ lang, searchQuery, activeCategory }: VideoGridProps) => {
-  const [videos, setVideos] = useState<Video[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchVideos = async () => {
-      setLoading(true);
-      // We simulate an API call here but fetch all instead of top 6
-      const { mockVideos } = await import('../data/mockVideos');
-      // Simulate network delay
-      await new Promise(resolve => setTimeout(resolve, 800));
-      setVideos(mockVideos);
-      setLoading(false);
-    };
-    fetchVideos();
-  }, []);
-
-  if (loading || videos.length === 0) {
+export const VideoGrid = ({ lang, searchQuery, activeCategory, videos, loading }: VideoGridProps) => {
+  if (loading) {
     return (
       <div className="flex items-center justify-center h-[400px]">
         <div className="flex flex-col items-center gap-4">

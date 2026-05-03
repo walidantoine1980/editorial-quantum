@@ -1,4 +1,4 @@
-import { Search, Bell, Globe } from 'lucide-react';
+import { Search, Bell, Globe, RefreshCw, Settings } from 'lucide-react';
 import type { Language } from '../App';
 
 interface TopBarProps {
@@ -6,9 +6,12 @@ interface TopBarProps {
   setLang: (lang: Language) => void;
   searchQuery: string;
   setSearchQuery: (query: string) => void;
+  onRefresh: () => void;
+  onSettingsClick: () => void;
+  isRefreshing: boolean;
 }
 
-export const TopBar = ({ lang, setLang, searchQuery, setSearchQuery }: TopBarProps) => {
+export const TopBar = ({ lang, setLang, searchQuery, setSearchQuery, onRefresh, onSettingsClick, isRefreshing }: TopBarProps) => {
   return (
     <header className="flex items-center justify-between px-10 py-6 w-full">
       <div className="flex items-center gap-4 bg-white/50 backdrop-blur-md px-5 py-3 rounded-2xl w-full max-w-md ring-1 ring-black/5 shadow-sm">
@@ -22,14 +25,33 @@ export const TopBar = ({ lang, setLang, searchQuery, setSearchQuery }: TopBarPro
         />
       </div>
 
-      <div className="flex items-center gap-6">
+      <div className="flex items-center gap-4">
+        {/* Refresh Button */}
+        <button 
+          onClick={onRefresh}
+          disabled={isRefreshing}
+          className="flex items-center gap-2 bg-brand-sidebar text-white px-4 py-2 rounded-xl shadow-md cursor-pointer hover:bg-black transition-colors disabled:opacity-50"
+        >
+            <RefreshCw size={16} className={isRefreshing ? "animate-spin" : ""} />
+            <span className="text-[13px] font-bold uppercase tracking-wider">{lang === 'fr' ? 'Rafraîchir' : 'Refresh'}</span>
+        </button>
+
         {/* Language Switcher */}
         <div 
           onClick={() => setLang(lang === 'fr' ? 'en' : 'fr')}
-          className="flex items-center gap-2 text-zinc-500 bg-white px-4 py-2 rounded-xl shadow-sm cursor-pointer hover:bg-zinc-50 transition-colors ring-1 ring-black/5"
+          className="flex items-center gap-2 text-zinc-500 bg-white px-3 py-2 rounded-xl shadow-sm cursor-pointer hover:bg-zinc-50 transition-colors ring-1 ring-black/5"
         >
             <Globe size={18} />
             <span className="text-[14px] font-bold uppercase tracking-wider">{lang}</span>
+        </div>
+
+        {/* Settings Button */}
+        <div 
+          onClick={onSettingsClick}
+          className="p-2 text-zinc-500 bg-white rounded-xl shadow-sm cursor-pointer hover:text-black hover:bg-zinc-50 transition-colors ring-1 ring-black/5"
+          title="API Settings"
+        >
+          <Settings size={20} />
         </div>
 
         <div className="relative p-2 text-zinc-500 hover:text-black cursor-pointer transition-colors">

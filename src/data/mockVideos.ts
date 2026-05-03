@@ -10,6 +10,7 @@ export interface Video {
     fr: string;
   };
   category: 'Computing' | 'Physics' | 'Biology' | 'Philosophy';
+  youtubeUrl: string;
   thumbnailUrl: string;
   channelName: string;
   channelAvatar: string;
@@ -31,6 +32,7 @@ export const mockVideos: Video[] = [
       fr: "Une analyse magistrale expliquant pourquoi les bits quantiques sont les successeurs inévitables de la logique binaire."
     },
     category: 'Computing',
+    youtubeUrl: 'https://www.youtube.com/watch?v=JhHMJCUmq28',
     thumbnailUrl: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?auto=format&fit=crop&q=80&w=1600',
     channelName: 'Kurzgesagt',
     channelAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Kurz',
@@ -50,6 +52,7 @@ export const mockVideos: Video[] = [
       fr: "Découvrez comment la nature a maîtrisé la superposition bien avant nos laboratoires, optimisant le transfert d'énergie."
     },
     category: 'Biology',
+    youtubeUrl: 'https://www.youtube.com/watch?v=WIyTZDHuarQ',
     thumbnailUrl: 'https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=800',
     channelName: 'Veritasium',
     channelAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Veri',
@@ -69,6 +72,7 @@ export const mockVideos: Video[] = [
       fr: "Un regard raffiné sur les principes fondamentaux qui régissent tout, présenté avec une clarté et une élégance inédites."
     },
     category: 'Physics',
+    youtubeUrl: 'https://www.youtube.com/watch?v=gAFAj3pzvAA',
     thumbnailUrl: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=800',
     channelName: 'Domain of Science',
     channelAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Science',
@@ -88,6 +92,7 @@ export const mockVideos: Video[] = [
       fr: "Un voyage philosophique dans le multivers, questionnant la nature même de l'existence par le prisme des probabilités."
     },
     category: 'Philosophy',
+    youtubeUrl: 'https://www.youtube.com/watch?v=p7XIdFbCQyY',
     thumbnailUrl: 'https://images.unsplash.com/photo-1462331940025-496dfbfc7564?auto=format&fit=crop&q=80&w=800',
     channelName: 'Sean Carroll',
     channelAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Sean',
@@ -107,6 +112,7 @@ export const mockVideos: Video[] = [
       fr: "Le cauchemar d'Einstein transformé en révolution computationnelle ; pourquoi la non-localité change notre vision de l'espace."
     },
     category: 'Physics',
+    youtubeUrl: 'https://www.youtube.com/watch?v=Q8bn-NXgOOk',
     thumbnailUrl: 'https://images.unsplash.com/photo-1534991715367-0c33403bcc27?auto=format&fit=crop&q=80&w=800',
     channelName: 'Physics Girl',
     channelAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Girl',
@@ -126,6 +132,7 @@ export const mockVideos: Video[] = [
       fr: "Déplacer l'information sans déplacer la matière : la pierre angulaire du futur internet quantique, expliquée avec précision."
     },
     category: 'Computing',
+    youtubeUrl: 'https://www.youtube.com/watch?v=yb38jozeDOs',
     thumbnailUrl: 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&q=80&w=800',
     channelName: 'Science Insider',
     channelAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Insider',
@@ -145,6 +152,7 @@ export const mockVideos: Video[] = [
       fr: "Une visualisation fascinante d'un espace à 11 dimensions où les particules se dissolvent en boucles d'énergie pure."
     },
     category: 'Physics',
+    youtubeUrl: 'https://www.youtube.com/watch?v=k6TWO-ESC6A',
     thumbnailUrl: 'https://images.unsplash.com/photo-1464802686167-b939a6910659?auto=format&fit=crop&q=80&w=1600',
     channelName: 'PBS Space Time',
     channelAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=PBS',
@@ -164,6 +172,7 @@ export const mockVideos: Video[] = [
       fr: "Créons-nous la réalité en la regardant ? Une plongée profonde dans la théorie de la réduction objective orchestrée."
     },
     category: 'Philosophy',
+    youtubeUrl: 'https://www.youtube.com/watch?v=0CwPa0tScf8',
     thumbnailUrl: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=800',
     channelName: 'Closer To Truth',
     channelAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Truth',
@@ -183,6 +192,7 @@ export const mockVideos: Video[] = [
       fr: "Comment les réseaux de neurones quantiques s'apprêtent à résoudre des problèmes qui prendraient des millénaires aux ordinateurs classiques."
     },
     category: 'Computing',
+    youtubeUrl: 'https://www.youtube.com/watch?v=NqHKr9CGWJ0',
     thumbnailUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800',
     channelName: 'Lex Fridman',
     channelAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Lex',
@@ -202,6 +212,7 @@ export const mockVideos: Video[] = [
       fr: "Les feuilles effectuent des calculs quantiques à chaque seconde. Comprendre la cohérence biologique change notre vision de la nature."
     },
     category: 'Biology',
+    youtubeUrl: 'https://www.youtube.com/watch?v=SxaoWJ2gkzc',
     thumbnailUrl: 'https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&q=80&w=800',
     channelName: 'MIT OpenCourseWare',
     channelAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=MIT',
@@ -221,6 +232,7 @@ export const mockVideos: Video[] = [
       fr: "Réconcilier l'infiniment grand et l'incroyablement petit : la quête ultime pour fusionner la relativité générale et la mécanique quantique."
     },
     category: 'Physics',
+    youtubeUrl: 'https://www.youtube.com/watch?v=H-_CGnTkuL0',
     thumbnailUrl: 'https://images.unsplash.com/photo-1454789548928-9efd52dc4031?auto=format&fit=crop&q=80&w=800',
     channelName: 'Quanta Magazine',
     channelAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Quanta',
@@ -240,6 +252,7 @@ export const mockVideos: Video[] = [
       fr: "Si les événements quantiques sont vraiment aléatoires, le hasard nous accorde-t-il le libre arbitre ? Un débat entre physiciens et neuroscientifiques."
     },
     category: 'Philosophy',
+    youtubeUrl: 'https://www.youtube.com/watch?v=rohgVwQ57uM',
     thumbnailUrl: 'https://images.unsplash.com/photo-1499209974431-9dddcece7f88?auto=format&fit=crop&q=80&w=800',
     channelName: 'Big Think',
     channelAvatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Think',

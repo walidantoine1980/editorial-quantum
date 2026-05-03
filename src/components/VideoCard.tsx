@@ -21,7 +21,7 @@ export const VideoCard = ({ video, isHero = false, lang }: VideoCardProps) => {
 
   return (
     <a 
-      href={`https://www.youtube.com/results?search_query=${encodeURIComponent(video.originalTitle)}`}
+      href={video.youtubeUrl}
       target="_blank"
       rel="noopener noreferrer"
       className={`group relative flex flex-col overflow-hidden rounded-[32px] bg-white transition-all duration-700 hover:shadow-[0_30px_60px_-15px_rgba(0,0,0,0.1)] hover:-translate-y-2 ring-1 ring-black/[0.03] cursor-pointer
