@@ -1,7 +1,6 @@
-import React from 'react';
 import { Play, Eye, Clock, Atom } from 'lucide-react';
-import { Video } from '../data/mockVideos';
-import { Language } from '../App';
+import type { Video } from '../data/mockVideos';
+import type { Language } from '../App';
 
 interface VideoCardProps {
   video: Video;

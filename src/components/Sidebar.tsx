@@ -1,6 +1,5 @@
-import React from 'react';
-import { Home, Zap, Atom, Brain, Library, Settings, LogOut, Sparkles } from 'lucide-react';
-import { Language } from '../App';
+import { Home, Zap, Atom, Brain, Library, Settings, LogOut } from 'lucide-react';
+import type { Language } from '../App';
 
 const SidebarItem = ({ icon: Icon, label, active = false, onClick }: { icon: any, label: string, active?: boolean, onClick?: () => void }) => (
   <div 

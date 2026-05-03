@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { VideoCard } from './VideoCard';
-import { Video } from '../data/mockVideos';
+import type { Video } from '../data/mockVideos';
 import { curationService } from '../services/curationService';
-import { Language } from '../App';
+import type { Language } from '../App';
 
 interface VideoGridProps {
   lang: Language;

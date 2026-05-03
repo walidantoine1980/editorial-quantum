@@ -1,5 +1,5 @@
 import { mockVideos } from '../data/mockVideos';
-
+import type { Video } from '../data/mockVideos';
 // This service would handle the YouTube API and AI Curation logic
 export const curationService = {
   async getDailyTop6(): Promise<Video[]> {
