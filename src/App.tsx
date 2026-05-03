@@ -49,7 +49,12 @@ function App() {
     setLoading(true);
 
     try {
-      const searchTerms = ["quantum mechanics", "quantum computing", "quantum entanglement explanation", "string theory", "quantum physics documentary"];
+      const searchTerms = [
+        // Anglais
+        "quantum mechanics", "quantum computing", "quantum entanglement", "string theory", "quantum physics documentary", "quantum biology",
+        // Français
+        "mécanique quantique vulgarisation", "ordinateur quantique", "physique quantique documentaire", "intrication quantique explication", "ordinateur quantique fonctionnement", "physique quantique pour les nuls"
+      ];
       const randomTerm = searchTerms[Math.floor(Math.random() * searchTerms.length)];
       
       const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=12&q=${encodeURIComponent(randomTerm)}&type=video&videoSyndicated=true&key=${apiKey}`);
